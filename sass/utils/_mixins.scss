@@ -1,0 +1,30 @@
+@mixin mini {
+    @media screen and (min-width: 0px) and (max-width:479px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (min-width: 480px) and (max-width:767px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin font($fs, $lh, $fw, $ls) {
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+    letter-spacing: $ls;
+}

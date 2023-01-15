@@ -1,0 +1,142 @@
+.our-team {
+    background-color: #f5f4fa;
+
+    li {
+    background-color: var(--white-text-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    }
+
+    h3 {
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    }
+
+
+
+    @include mini {
+        h2 {
+            margin: 0px 0px 30px 0px;
+        }
+
+        li+li {
+            margin-top: 30px;
+        }
+
+
+        .our-team__img {
+            width: 450px;
+        }
+    }
+
+    @include mobile {
+        h2 {
+        margin: 0px 0px 30px 0px;
+        }
+
+        li+li {
+                margin-top: 30px;
+            }
+        
+    
+        .our-team__img {
+        width: 450px;}
+    }
+
+    @include tablet {
+        ul {
+        display: inline-flex;
+        flex-wrap: wrap;
+        }
+        
+        li:nth-child(odd) {
+        margin-right: 30px;
+        }
+        
+        li:nth-child(n+3) {
+        margin-top: 30px;
+        }
+
+        .our-team__img {
+        width: 354px;}
+    }
+
+    @include desktop {
+        ul {
+        display: inline-flex;
+        }
+        h2 {
+        margin-bottom: 50px;
+        }
+
+        li+li {
+        margin-left: 30px;
+        }
+    
+        .our-team__img {
+        width: 270px ;}
+    }
+
+}
+
+
+.title__prev {
+    padding: 30px 0px 30px 0px;
+}
+
+.title__prev>p {
+    margin: 0px 0px 16px 0px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+}
+
+
+.social-links-parent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-links {
+    display: inline-flex;
+    box-sizing: content-box;
+    padding: 12px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-text-color);
+    }
+    &:focus .social-links-icon,
+    &:hover .social-links-icon {
+        fill: #fff;
+    } 
+    
+    &+& {
+        margin-left: 10px;
+    }
+}
+
+
+.social-links-icon {
+    fill: #afb1b8;
+    height: 20px;
+    width: 20px;
+}

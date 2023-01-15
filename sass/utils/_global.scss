@@ -1,0 +1,62 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.links-hover {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: var(--accent-text-color);
+        }
+}
+
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    color: #212121;
+    background-color: var(--bg-text-color);
+}
+
+.list {
+    /* list-style reset */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.conteiner {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 15px;
+
+    @include mobile {max-width: 480px;}
+    @include tablet {max-width: 768px;}
+    @include desktop {max-width: 1200px;}
+}
+

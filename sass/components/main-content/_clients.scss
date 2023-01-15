@@ -1,0 +1,73 @@
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include mini {
+        display: block;
+        li+li {
+        margin-top: 30px;
+        }
+    }
+
+    @include mobile { 
+        li {
+        width: calc((100% - 30px)/2);
+        }
+
+        li:nth-child(odd) {
+        margin-right: 30px;
+        }
+        li:nth-child(n+3){
+        margin-top: 30px;
+        }
+    }
+
+    @include tablet {
+        li {
+        
+        width: calc((100% - 60px)/3);
+        }
+        li:nth-child(3n+2){
+        margin-left: 30px;
+        margin-right: 30px;
+        }
+        li:nth-child(n+4){
+        margin-top: 30px;
+        }
+    }
+
+    @include desktop {
+        flex-wrap:nowrap;
+        justify-content: space-between;
+
+        li {
+        width: calc((100% - 30px*5)/6);
+        }
+    }
+  
+
+}
+
+.client {
+    height: 60px;
+    box-sizing: content-box;
+    padding: 16px 32px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    fill: #afb1b8;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-card {
+    display: flex;
+    outline: none;
+    &:hover .client,
+    &:focus .client {
+        fill: var(--accent-text-color);
+        border: 1px solid var(--accent-text-color);
+        border-radius: 4px;
+        }
+}
+

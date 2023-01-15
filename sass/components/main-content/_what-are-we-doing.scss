@@ -1,0 +1,53 @@
+.iner-img {
+    position: relative;
+}
+
+.what-are-we-doing {
+    display: none;
+    
+    @include mobile {
+     
+
+    }
+
+    @include tablet {
+       
+
+    }
+
+    @include desktop {
+        display: block;
+        padding: 0px 0px 94px 0px;
+        ul {
+            display: inline-flex;
+        }
+        li+li {
+            margin-left: 30px;
+        }
+    }
+
+
+}
+
+
+.what-are-we-doing 
+.title-holder {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(47, 48, 58, 0.8);
+    padding: 27px 0px;
+}
+
+.title-holder>h3 {
+    margin: 0px;
+    text-align: center;
+    line-height: 1.14;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
